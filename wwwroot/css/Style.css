@@ -1,0 +1,107 @@
+﻿html,
+body,
+.cover {
+    height: 100%;
+}
+
+.cover {
+    background: url("books2.jpeg") no-repeat;
+    background-size: cover;
+    display: table;
+    width: 100%;
+}
+
+.cover-text {
+    text-align: center;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Teko', sans-serif;
+}
+
+.cover-text h1 {
+    margin: 0;
+    font-size: 70px;
+    letter-spacing: -3px;
+}
+
+nav {
+    opacity: 0.9;
+    border: none;
+}
+
+.testimonial {
+    background: #222;
+}
+
+blockquote {
+    border: none;
+    margin: 0;
+    font-family: Georgia, Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+}
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+section {
+    padding: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 60px;
+}
+
+    /* Sibling Selector(h2 + p) */
+    h2 + p {
+        text-align: center;
+        margin-top: -60px;
+    }
+
+#team {
+    background: url("team.jpg") no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Georgia, Times, serif;
+}
+
+    footer a {
+        color: hotpink;
+    }
+
+        footer a:hover {
+            color: hotpink;
+        }
+
+/* For small screens responsiveness */
+/* Media Queries */
+
+@media only screen and (max-width: 568) {
+    .cover h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
