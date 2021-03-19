@@ -9,8 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Mockups\MHtml\" />
-    <Folder Include="wwwroot\Mockups\MCss\" />
     <Folder Include="wwwroot\Mockups\MJs\" />
   </ItemGroup>
 
