@@ -93,9 +93,20 @@ footer {
             color: hotpink;
         }
 
+
+
+
+
+#col1{
+    margin-left:220px;
+}
+
+
+
+
+
 /* For small screens responsiveness */
 /* Media Queries */
-
 @media only screen and (max-width: 568) {
     .cover h1 {
         font-size: 40px;
