@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link href="../css/RegisCSS.css" rel="stylesheet" />
+
+    <title>Registration Form</title>
+</head>
+<body>
+
+
+    <div class="card card-inverse card-primary">
+        <div class="card-body">
+            <div class="text-center">
+                <h4 class="card-title">
+                    <b>Registration Form</b> <svg class="bi bi-file-text" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 1h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H4z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 015 10h3a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 8h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 6h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 4h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+                    </svg>
+                </h4>
+            </div>
+            <form>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="lblFname" class="font-weight-bold">
+                        Full Name
+                    </label>
+                    <input type="text" class="form-control" id="txtFname" placeholder="Aditya Shreeprakash Patel">
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="lblAddress" class="font-weight-bold">
+                        Enter Address
+                    </label>
+                    <input type="text" class="form-control" id="txtAddress" placeholder="A-70, Silver Oaks, Beverly Hills, California, USA" />
+                </div>
+
+                <!-- Area -->
+                <div class="form-group">
+                    <label for="lblArea" class="font-weight-bold">
+                        Enter Area
+                    </label>
+                    <input type="text" class="form-control" id="txtArea" placeholder="Beverly Hills" />
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="lblCity" class="font-weight-bold">
+                        Enter City
+                    </label>
+                    <input type="text" class="form-control" id="txtCity" placeholder="Mira Road" />
+                </div>
+
+                <!-- Pincode -->
+                <div class="form-group">
+                    <label for="lblPincode" class="font-weight-bold">
+                        Enter Pincode
+                    </label>
+                    <input type="text" class="form-control" id="txtPincode" placeholder="401107" />
+                </div>
+
+                <!-- State -->
+                <div class="form-group">
+                    <label for="lblState" class="font-weight-bold">
+                        Select State
+                    </label>
+                    <select class="form-control" id="ddlState">
+                        <option value="0" selected>----- Select State -----</option>
+                        <option value="1">Andhra Pradesh</option>
+                        <option value="2">Arunachal Pradesh</option>
+                        <option value="3">Assam</option>
+                        <option value="4">Bihar</option>
+                        <option value="5">Chhattisgarh</option>
+                        <option value="6">Goa</option>
+                        <option value="7">Gujarat</option>
+                        <option value="8">Haryana</option>
+                        <option value="9">Himachal Pradesh</option>
+                        <option value="10">Jharkhand</option>
+                        <option value="11">Karnataka</option>
+                        <option value="12">Kerala</option>
+                        <option value="13">Madhya Pradesh</option>
+                        <option value="14">Maharashtra</option>
+                        <option value="15">Manipur</option>
+                        <option value="16">Meghalaya</option>
+                        <option value="17">Mizoram</option>
+                        <option value="18">Nagaland</option>
+                        <option value="19">Odisha</option>
+                        <option value="20">Punjab</option>
+                        <option value="21">Rajasthan</option>
+                        <option value="22">Sikkim</option>
+                        <option value="23">Tamil Nadu</option>
+                        <option value="24">Telangana</option>
+                        <option value="25">Tripura</option>
+                        <option value="26">Uttar Pradesh</option>
+                        <option value="27">Uttarakhand</option>
+                        <option value="28">West Bengal</option>
+                    </select>
+                </div>
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="lblAge" class="font-weight-bold">
+                        Enter Age
+                    </label>
+                    <input type="text" class="form-control" id="txtAge" placeholder="Age" />
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="lblGender" class="font-weight-bold">
+                        Select Gender
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genderRadios" id="rdbMale" value="0">
+                        <label class="form-check-label" for="rdbMale">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genderRadios" id="rdbFemale" value="1">
+                        <label class="form-check-label" for="rdbFemale">
+                            Female
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genderRadios" id="rdbOthers" value="2">
+                        <label class="form-check-label" for="rdbOthers">
+                            Others
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label for="lblDob" class="font-weight-bold">
+                        Enter Date Of Birth
+                    </label>
+                    <input class="form-control" type="date" id="txtDob">
+                </div>
+
+                <!-- Adhaar Card Number -->
+                <div class="form-group">
+                    <label for="lblAdhaarNum" class="font-weight-bold">
+                        Enter Adhaar Card Number
+                    </label>
+                    <input type="text" class="form-control" id="txtAdhaarNum" placeholder="1111-2222-3333" />
+                </div>
+
+                <!-- Pan Card Number -->
+                <div class="form-group">
+                    <label for="lblPanNum" class="font-weight-bold">
+                        Enter Pan Card Number
+                    </label>
+                    <input type="text" class="form-control" id="txtPanNum" placeholder="ABCD1111A" />
+                </div>
+
+                <!-- Email id -->
+                <div class="form-group">
+                    <label for="lblEmailid" class="font-weight-bold">
+                        Enter Email Id
+                    </label><span style="color:green" class="ml-1">*This emaild is your login id</span>
+                    <input type="email" class="form-control" id="txtEmailid" placeholder="abcd@gmail.com" />
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="lblPassword" class="font-weight-bold">
+                        Enter Password
+                    </label>
+                    <input type="password" id="txtPassword" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Password">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </small>
+                </div>
+
+                <div class="text-center"><button type="submit" class="btn btn-primary" id="myBtnSubmit">Submit</button></div>
+
+                <script>
+                    document.getElementById('myBtnSubmit').addEventListener('click', function (e) {
+
+                        validateFormField();
+
+                        e.preventDefault();
+                    })
+
+                    function validateFeild() {
+                        var isValid = true;
+                        var txtFullName = $('#txtFname');
+                        var txtAddress = $('#txtAddress');
+                        var txtArea = $('#txtArea');
+                        var txtCity = $('#txtCity');
+                        var txtPincode = $('#txtPincode');
+                        var txtState = $('#ddlState');
+                        var txtAge = $('#txtAge');
+                        var txtDob = $('#txtDob');
+                        var txtAdhaarno = $('#txtAdhaarNum');
+                        var txtPanno = $('#txtPanNum');
+                        var txtEmailid = $('#txtEmailid');
+                        var txtPassword = $('#txtPassword');
+
+                        console.log(txtFullName.val());
+                        console.log(txtAddress.val());
+                        console.log(txtArea.val());
+                        console.log(txtCity.val());
+                        console.log(txtPincode.val());
+                        console.log(txtState.val());
+                        console.log(txtAge.val());
+                        console.log(txtDob.val());
+                        console.log(txtAdhaarno.val());
+                        console.log(txtPanno.val());
+                        console.log(txtEmailid.val());
+                        console.log(txtPassword.val());
+
+
+                    }
+
+                    function validateFormField() {
+                        var isValid = true;
+                        var txtFullName = $('#txtFname');
+                        var txtAddress = $('#txtAddress');
+                        var txtArea = $('#txtArea');
+                        var txtCity = $('#txtCity');
+                        var txtPincode = $('#txtPincode');
+                        var txtState = $('#ddlState');
+                        var txtAge = $('#txtAge');
+                        var txtDob = $('#txtDob');
+                        var txtAdhaarno = $('#txtAdhaarNum');
+                        var txtPanno = $('#txtPanNum');
+                        var txtEmailid = $('#txtEmailid');
+                        var txtPassword = $('#txtPassword');
+
+                        // for FullName
+                        if ($.trim((txtFullName).val()) == "" || $.trim((txtFullName).val()) == null) {
+                            isValid = false;
+                            $(txtFullName).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtFullName).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+
+                        // for Address
+                        if ($.trim((txtAddress).val()) == "" || $.trim((txtAddress).val()) == null) {
+                            isValid = false;
+                            $(txtAddress).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtAddress).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+
+                        // for Area
+                        if ($.trim((txtArea).val()) == "" || $.trim((txtArea).val()) == null) {
+                            isValid = false;
+                            $(txtArea).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtArea).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for City
+                        if ($.trim((txtCity).val()) == "" || $.trim((txtCity).val()) == null) {
+                            isValid = false;
+                            $(txtCity).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtCity).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for Pincode
+                        if ($.trim((txtPincode).val()) == "" || $.trim((txtPincode).val()) == null) {
+                            isValid = false;
+                            $(txtPincode).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtPincode).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for State
+                        if ($.trim((txtState).val()) == null || $.trim((txtState).val()) == 0) {
+                            isValid = false;
+                            $(txtState).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtState).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+
+                        // for Age
+                        if ($.trim((txtAge).val()) == "" || $.trim((txtAge).val()) == null) {
+                            isValid = false;
+                            $(txtAge).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtAge).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for Date Of Birth
+                        if ($.trim((txtDob).val()) == "" || $.trim((txtDob).val()) == null) {
+                            isValid = false;
+                            $(txtDob).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtDob).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+
+                        // for Adhaarcard number
+                        if ($.trim((txtAdhaarno).val()) == "" || $.trim((txtAdhaarno).val()) == null) {
+                            isValid = false;
+                            $(txtAdhaarno).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtAdhaarno).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for Pancard number
+                        if ($.trim((txtPanno).val()) == "" || $.trim((txtPanno).val()) == null) {
+                            isValid = false;
+                            $(txtPanno).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtPanno).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for Email
+                        if ($.trim((txtEmailid).val()) == "" || $.trim((txtEmailid).val()) == null) {
+                            isValid = false;
+                            $(txtEmailid).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtEmailid).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+
+                        // for password
+                        if ($.trim((txtPassword).val()) == "" || $.trim((txtPassword).val()) == null) {
+                            isValid = false;
+                            $(txtPassword).css({
+                                "border": "1px solid red",
+                                "background": "#FFCECE"
+                            })
+                        }
+                        else {
+                            $(txtPassword).css({
+                                "border": "",
+                                "background": ""
+                            })
+                        }
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>
