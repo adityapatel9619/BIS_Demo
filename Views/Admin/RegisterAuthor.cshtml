@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-inverse card-primary mt-2">
+    <div class="card-body">
+        <div class="text-center">
+            <h4 class="card-title">
+                <b>Register Author</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                </svg>
+            </h4>
+        </div>
+        <form>
+            <!-- Author Name -->
+            <div class="form-group">
+                <label for="txtAuthName" class="font-weight-bold">
+                    Author Name
+                </label>
+                <input type="text" class="form-control" id="txtAuthName" placeholder="Robin Sharma">
+            </div>
+
+            <!-- Author Address -->
+            <div class="form-group">
+                <label for="txtAuthAddress" class="font-weight-bold">
+                    Author Address
+                </label>
+                <input type="text" class="form-control" id="txtAuthAddress" placeholder="ABC, Beverly Hills, California">
+            </div>
+
+            <!-- Date and Gender-->
+            <div class="row">
+                    <!-- Date -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtAuthDOB" class="font-weight-bold">
+                            Date Of Birth
+                        </label>
+                        <input class="form-control" type="date" id="txtAuthDOB">
+                    </div>
+                </div>
+
+                    <!-- Gender -->
+
+                <div class="col-md-6">
+                    <br />
+                    <div class="form-inline">
+                        <label for="lblGender" class="font-weight-bold">
+                            Select Gender
+                        </label>
+                        <br />
+                        <div class="form-check form-check-inline ml-4">
+                            <input class="form-check-input" type="radio" name="genderRadios" id="rdbMale" value="0">
+                            <label class="form-check-label" for="rdbMale">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genderRadios" id="rdbFemale" value="1">
+                            <label class="form-check-label" for="rdbFemale">
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genderRadios" id="rdbOthers" value="2">
+                            <label class="form-check-label" for="rdbOthers">
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Email & Contact -->
+            <div class="row">
+                <!-- E-mail Id-->
+                <div class="col-md-6">
+                    <label for="txtAuthEmail" class="font-weight-bold">
+                        Email Id
+                    </label>
+                    <input type="text" class="form-control" id="txtAuthEmail" placeholder="robinsharma@email.com">
+                </div>
+
+                <!-- Contact No -->
+                <div class="col-md-6">
+                    <label for="txtAuthContact" class="font-weight-bold">
+                        Contact Number
+                    </label>
+                    <input type="text" class="form-control" id="txtAuthContact" placeholder="111-222-4444">
+                </div>
+            </div>
+
+            <!-- Author Title -->
+            <div class="form-group">
+                <label for="lblTitle" class="font-weight-bold">
+                    Title
+                </label>
+                <select class="form-control" id="ddlTitle">
+                    <option value="0" selected>----- Select Title -----</option>
+                    <option value="1">Mr</option>
+                    <option value="2">Mrs</option>
+                    <option value="3">Master</option>
+                    <option value="4">Miss</option>
+                </select>
+            </div>
+
+
+            <!-- Author Image File -->
+            <div class="form-group">
+                <label for="fileAuthImage" class="font-weight-bold">
+                    Author Image
+                </label>
+
+                <input type="file" class="form-control-file" id="fileAuthImage">
+            </div>
+
+
+
+
+
+
+
+            <div class="text-center"><button type="submit" class="btn btn-primary" id="myBtnSubmit">Submit</button></div>
+
+            <script>
+                document.getElementById('myBtnSubmit').addEventListener('click', function (e) {
+
+                    validateFormField();
+
+                    e.preventDefault();
+                })
+
+
+                function validateFormField() {
+                    var isValid = true;
+                    var txtBookName = $("#txtBName");
+                    var txtBookCategory = $("#ddlBCategory");
+                    var txtAuthTitle = $("#ddlTitle");
+                    var txtAuthName = $("#txtAuthName");
+                    var uplBookImage = $("#fuploadBCovImg");
+
+                    // for Book Name
+                    if ($.trim((txtBookName).val()) == "" || $.trim((txtBookName).val()) == null) {
+                        isValid = false;
+                        $(txtBookName).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookName).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    // for Book Category
+                    if ($.trim((txtBookCategory).val()) == 0 || $.trim((txtBookCategory).val()) == null) {
+                        isValid = false;
+                        $(txtBookCategory).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookCategory).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Author Title
+                    if ($.trim((txtAuthTitle).val()) == 0 || $.trim((txtAuthTitle).val()) == null) {
+                        isValid = false;
+                        $(txtAuthTitle).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthTitle).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Author Name
+                    if ($.trim((txtAuthName).val()) == "" || $.trim((txtAuthName).val()) == null) {
+                        isValid = false;
+                        $(txtAuthName).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthName).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    // for Upload Image
+                    if ($.trim((uplBookImage).val()) == "") {
+                        isValid = false;
+                        $("#fuploadBCovImg").addClass("custom- control - input")
+                    }
+                    else {
+                        $("#uploadImage").css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+                }
+            </script>
+        </form>
+    </div>
+</div>
+

@@ -17,5 +17,15 @@ namespace BIS_Demo.Controllers
         {
             return View();
         }
+
+        public IActionResult AddBook()
+        {
+            return View();
+        }
+
+        public IActionResult RegisterAuthor()
+        {
+            return View();
+        }
     }
 }
