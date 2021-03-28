@@ -5,11 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.6.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\Mockups\MJs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminLib\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\AdminLib\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\AdminLib\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\AdminLib\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\AdminLib\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\AdminLib\css\styles.css" />
+    <None Include="wwwroot\AdminLib\js\scripts.js" />
   </ItemGroup>
 
 </Project>
