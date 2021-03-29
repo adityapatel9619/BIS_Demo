@@ -122,9 +122,6 @@
 
 
 
-
-
-
             <div class="text-center"><button type="submit" class="btn btn-primary" id="myBtnSubmit">Submit</button></div>
 
             <script>
@@ -138,58 +135,13 @@
 
                 function validateFormField() {
                     var isValid = true;
-                    var txtBookName = $("#txtBName");
-                    var txtBookCategory = $("#ddlBCategory");
-                    var txtAuthTitle = $("#ddlTitle");
                     var txtAuthName = $("#txtAuthName");
-                    var uplBookImage = $("#fuploadBCovImg");
-
-                    // for Book Name
-                    if ($.trim((txtBookName).val()) == "" || $.trim((txtBookName).val()) == null) {
-                        isValid = false;
-                        $(txtBookName).css({
-                            "border": "1px solid red",
-                            "background": "#FFCECE"
-                        })
-                    }
-                    else {
-                        $(txtBookName).css({
-                            "border": "",
-                            "background": ""
-                        })
-                    }
-
-                    // for Book Category
-                    if ($.trim((txtBookCategory).val()) == 0 || $.trim((txtBookCategory).val()) == null) {
-                        isValid = false;
-                        $(txtBookCategory).css({
-                            "border": "1px solid red",
-                            "background": "#FFCECE"
-                        })
-                    }
-                    else {
-                        $(txtBookCategory).css({
-                            "border": "",
-                            "background": ""
-                        })
-                    }
-
-
-                    // for Author Title
-                    if ($.trim((txtAuthTitle).val()) == 0 || $.trim((txtAuthTitle).val()) == null) {
-                        isValid = false;
-                        $(txtAuthTitle).css({
-                            "border": "1px solid red",
-                            "background": "#FFCECE"
-                        })
-                    }
-                    else {
-                        $(txtAuthTitle).css({
-                            "border": "",
-                            "background": ""
-                        })
-                    }
-
+                    var txtAuthAddress = $("#txtAuthAddress");
+                    var txtAuthDOB = $("#txtAuthDOB");
+                    var txtAuthEmail = $("#txtAuthEmail");
+                    var txtAuthContact = $("#txtAuthContact");
+                    var ddlTitle = $("#ddlTitle");
+                    
 
                     // for Author Name
                     if ($.trim((txtAuthName).val()) == "" || $.trim((txtAuthName).val()) == null) {
@@ -206,17 +158,88 @@
                         })
                     }
 
-                    // for Upload Image
-                    if ($.trim((uplBookImage).val()) == "") {
+
+                    // for Author Address
+                    if ($.trim((txtAuthAddress).val()) == "" || $.trim((txtAuthAddress).val()) == null) {
                         isValid = false;
-                        $("#fuploadBCovImg").addClass("custom- control - input")
+                        $(txtAuthAddress).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
                     }
                     else {
-                        $("#uploadImage").css({
+                        $(txtAuthAddress).css({
                             "border": "",
                             "background": ""
                         })
                     }
+
+                    // for Author Date Of Birth
+                    if ($.trim((txtAuthDOB).val()) == "" || $.trim((txtAuthDOB).val()) == null) {
+                        isValid = false;
+                        $(txtAuthDOB).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthDOB).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Author Email
+                    if ($.trim((txtAuthEmail).val()) == "" || $.trim((txtAuthEmail).val()) == null) {
+                        isValid = false;
+                        $(txtAuthEmail).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthEmail).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    
+
+                    // for Author Contact
+                    if ($.trim((txtAuthContact).val()) == "" || $.trim((txtAuthContact).val()) == null) {
+                        isValid = false;
+                        $(txtAuthContact).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthContact).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+
+                    // for Title
+                    if ($.trim((ddlTitle).val()) == 0 || $.trim((ddlTitle).val()) == null) {
+                        isValid = false;
+                        $(ddlTitle).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(ddlTitle).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
                 }
             </script>
         </form>
