@@ -19,11 +19,11 @@ body,
     font-family: 'Teko', sans-serif;
 }
 
-.cover-text h1 {
-    margin: 0;
-    font-size: 70px;
-    letter-spacing: -3px;
-}
+    .cover-text h1 {
+        margin: 0;
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
 
 nav {
     opacity: 0.9;
@@ -97,8 +97,8 @@ footer {
 
 
 
-#col1{
-    margin-left:220px;
+#col1 {
+    margin-left: 220px;
 }
 
 
