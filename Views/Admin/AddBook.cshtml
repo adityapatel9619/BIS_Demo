@@ -23,7 +23,13 @@
                 <input type="text" class="form-control" id="txtBName" placeholder="Let Us C">
             </div>
 
-
+            <!-- Book ISBN -->
+            <div class="form-group">
+                <label for="txtBISBN" class="font-weight-bold">
+                    Book ISBN No
+                </label>
+                <input type="text" class="form-control" id="txtBISBN" placeholder="AB2345BG">
+            </div>
 
             <!-- Book Category -->
             <div class="form-group">
@@ -78,14 +84,21 @@
 
             <!-- Book Status -->
             <div class="form-group">
-                <label for="ddlBStatus" class="font-weight-bold">
+                <label for="lblBStatus" class="font-weight-bold">
                     Book Status
                 </label>
-                <select class="form-control" id="ddlBStatus">
-                    <option value="0" selected>----- Select Status -----</option>
-                    <option value="1">Active</option>
-                    <option value="2">De-active</option>
-                </select>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="BStatus" id="rdbBActive" value="0">
+                    <label class="form-check-label" for="rdbBActive">
+                        Active
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="BStatus" id="rdbBDActive" value="1">
+                    <label class="form-check-label" for="rdbBDActive">
+                        De-active
+                    </label>
+                </div>
             </div>
 
 

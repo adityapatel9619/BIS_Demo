@@ -18,12 +18,25 @@ namespace BIS_Demo.Controllers
             return View();
         }
 
+        public IActionResult RegisterAuthor()
+        {
+            return View();
+        }
+
+
+        // Manage Books
+
         public IActionResult AddBook()
         {
             return View();
         }
 
-        public IActionResult RegisterAuthor()
+        public IActionResult SearchBook()
+        {
+            return View();
+        }
+
+        public IActionResult UpdateBook()
         {
             return View();
         }

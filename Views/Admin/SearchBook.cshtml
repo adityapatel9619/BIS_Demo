@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "Search Books";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-inverse card-primary mt-2">
+    <div class="card-body">
+        <div class="text-center">
+            <h4 class="card-title">
+                <b>Search Book</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </h4>
+        </div>
+        <form>
+            <!-- Book Name -->
+            <div class="form-group">
+                <label for="lblBName" class="font-weight-bold">
+                    Book Name
+                </label>
+                <input type="text" class="form-control" id="txtBName" placeholder="Let Us C">
+            </div>
+
+            <!-- Book ISBN -->
+            <div class="form-group">
+                <label for="txtBISBN" class="font-weight-bold">
+                    Book ISBN No
+                </label>
+                <input type="text" class="form-control" id="txtBISBN" placeholder="AB2345BG">
+            </div>
+
+
+
+            
+
+
+
+
+
+
+            <div class="text-center"><button type="submit" class="btn btn-info" id="myBtnSearch">Search</button></div>
+
+            <script>
+                document.getElementById('myBtnSearch').addEventListener('click', function (e) {
+
+                    validateFormField();
+
+                    e.preventDefault();
+                })
+
+
+                function validateFormField() {
+                    var isValid = true;
+                    var txtBookName = $("#txtBName");
+                    var txtBookISBN = $("#txtBISBN");
+                    
+
+                    // for Book Name
+                    if ($.trim((txtBookName).val()) == "" || $.trim((txtBookName).val()) == null) {
+                        isValid = false;
+                        $(txtBookName).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookName).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    // for Book ISBN
+
+                    if ($.trim((txtBookISBN).val()) == "" || $.trim((txtBookISBN).val()) == null) {
+                        isValid = false;
+                        $(txtBookISBN).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookISBN).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+                    
+                }
+            </script>
+        </form>
+    </div>
+</div>
+
