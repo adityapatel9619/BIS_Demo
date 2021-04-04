@@ -40,5 +40,12 @@ namespace BIS_Demo.Controllers
         {
             return View();
         }
+
+        // Table Display
+
+        public IActionResult TableDisplay()
+        {
+            return View();
+        }
     }
 }

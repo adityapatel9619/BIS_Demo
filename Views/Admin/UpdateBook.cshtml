@@ -1,8 +1,244 @@
 ﻿
 @{
-    ViewData["Title"] = "UpdateBook";
+    ViewData["Title"] = "Add Book";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>UpdateBook</h1>
+<div class="card card-inverse card-primary mt-2">
+    <div class="card-body">
+        <div class="text-center">
+            <h4 class="card-title">
+                <b>Update Book Details</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg>
+            </h4>
+        </div>
+        <form>
+            <!-- Book Name -->
+            <div class="form-group">
+                <label for="lblBName" class="font-weight-bold">
+                    Book Name
+                </label>
+                <input type="text" class="form-control" id="txtBName" placeholder="Let Us C">
+            </div>
+
+            <!-- Book ISBN -->
+            <div class="form-group">
+                <label for="txtBISBN" class="font-weight-bold">
+                    Book ISBN No
+                </label>
+                <input type="text" class="form-control" id="txtBISBN" placeholder="AB2345BG">
+            </div>
+
+            <!-- Book Category -->
+            <div class="form-group">
+                <label for="ddlBCategory" class="font-weight-bold">
+                    Book Category
+                </label>
+                <select class="form-control" id="ddlBCategory">
+                    <option value="0" selected>----- Select Category -----</option>
+                    <option value="1">Educational</option>
+                    <option value="2">Programming</option>
+                    <option value="3">Science & Engineering</option>
+                    <option value="4">Medical and Pharmacology</option>
+                    <option value="5">Fictions & Research</option>
+                    <option value="6">Banking</option>
+                    <option value="7">Accounting & Finance</option>
+                </select>
+            </div>
+
+
+            <!-- Author Title -->
+            <div class="form-group">
+                <label for="ddlTitle" class="font-weight-bold">
+                    Title
+                </label>
+                <select class="form-control" id="ddlTitle">
+                    <option value="0" selected>----- Select Title -----</option>
+                    <option value="1">Mr</option>
+                    <option value="2">Mrs</option>
+                    <option value="3">Master</option>
+                    <option value="4">Miss</option>
+                </select>
+            </div>
+
+            <!-- Author Name -->
+            <div class="form-group">
+                <label for="txtAuthName" class="font-weight-bold">
+                    Author Name
+                </label>
+                <input type="text" class="form-control" id="txtAuthName" placeholder="Yashwant Kanetkar">
+            </div>
+
+
+            <!-- Browse File -->
+            <div class="form-group">
+                <label for="fileBCoImg" class="font-weight-bold">
+                    Book Cover Image
+                </label>
+
+                <input type="file" class="form-control-file" id="fileBCoImg">
+            </div>
+
+
+            <!-- Book Status -->
+            <div class="form-group">
+                <label for="lblBStatus" class="font-weight-bold">
+                    Book Status
+                </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="BStatus" id="rdbBActive" value="0">
+                    <label class="form-check-label" for="rdbBActive">
+                        Active
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="BStatus" id="rdbBDActive" value="1">
+                    <label class="form-check-label" for="rdbBDActive">
+                        De-active
+                    </label>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="text-center"><button type="submit" class="btn btn-primary" id="myBtnUpdate">Update</button></div>
+
+            <script>
+                document.getElementById('myBtnUpdate').addEventListener('click', function (e) {
+
+                    validateFormField();
+
+                    e.preventDefault();
+                })
+
+
+                function validateFormField() {
+                    var isValid = true;
+                    var txtBookName = $("#txtBName");
+                    var txtBookCategory = $("#ddlBCategory");
+                    var txtAuthTitle = $("#ddlTitle");
+                    var txtAuthName = $("#txtAuthName");
+                    var uplBookImage = $("#fuploadBCovImg");
+                    var txtBStatus = $('#ddlBStatus');
+                    var txtBookISBN = $("#txtBISBN");
+
+                    // for Book Name
+                    if ($.trim((txtBookName).val()) == "" || $.trim((txtBookName).val()) == null) {
+                        isValid = false;
+                        $(txtBookName).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookName).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    // for Book Category
+                    if ($.trim((txtBookCategory).val()) == 0 || $.trim((txtBookCategory).val()) == null) {
+                        isValid = false;
+                        $(txtBookCategory).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookCategory).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Author Title
+                    if ($.trim((txtAuthTitle).val()) == 0 || $.trim((txtAuthTitle).val()) == null) {
+                        isValid = false;
+                        $(txtAuthTitle).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthTitle).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Author Name
+                    if ($.trim((txtAuthName).val()) == "" || $.trim((txtAuthName).val()) == null) {
+                        isValid = false;
+                        $(txtAuthName).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtAuthName).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                    // for Upload Image
+                    if ($.trim((uplBookImage).val()) == "") {
+                        isValid = false;
+                        $("#fuploadBCovImg").addClass("custom- control - input")
+                    }
+                    else {
+                        $("#uploadImage").css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+                    // for Book Status
+                    if ($.trim((txtBStatus).val()) == 0 || $.trim((txtBStatus).val()) == null) {
+                        isValid = false;
+                        $(txtBStatus).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBStatus).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+
+
+                    // for Book ISBN
+
+                    if ($.trim((txtBookISBN).val()) == "" || $.trim((txtBookISBN).val()) == null) {
+                        isValid = false;
+                        $(txtBookISBN).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        })
+                    }
+                    else {
+                        $(txtBookISBN).css({
+                            "border": "",
+                            "background": ""
+                        })
+                    }
+
+                }
+            </script>
+        </form>
+    </div>
+</div>
 

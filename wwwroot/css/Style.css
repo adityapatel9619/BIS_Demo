@@ -105,6 +105,17 @@ footer {
 
 
 
+
+
+
+
+.hStyle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+
+
 /* For small screens responsiveness */
 /* Media Queries */
 @media only screen and (max-width: 568) {
@@ -116,3 +127,6 @@ footer {
         padding: 20px;
     }
 }
+
+
+
